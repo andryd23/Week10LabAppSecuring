@@ -32,7 +32,7 @@ public class AdminFilter implements Filter {
         HttpSession session = httpRequest.getSession();
         String email = (String)session.getAttribute("email");
         
-        if(!email.contains("admin")) {
+        if(!email.equals("cprg352+admin@gmail.com")) {
             HttpServletResponse httpResponse = (HttpServletResponse)response;
             httpResponse.sendRedirect("notes");
             return;
